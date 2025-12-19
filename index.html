@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/variables.css">
+</head>
+<body>
+    <header class="navbar">
+  <div class="nav-container">
+
+    <!-- LEFT: terminal + links -->
+    <div class="nav-left">
+      <span class="terminal">~/I</span>
+
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About me</a>
+        <a href="#technologies">Technology & Tools</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Soft Skills</a>
+        <a href="#languages">Languages</a>
+      </nav>
+    </div>
+
+    <!-- RIGHT: actions -->
+    <div class="nav-right">
+
+      <!-- Theme toggle -->
+      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+        🌙
+      </button>
+
+      <!-- Dropdown menu -->
+      <div class="menu-container">
+        <button id="menu-btn" class="icon-btn">☰</button>
+        <ul id="menu-dropdown" class="dropdown hidden">
+          <li><a href="pages/contact.html">Contact me</a></li>
+          <li><a href="pages/projects.html">More projects</a></li>
+          <li><a href="pages/learning.html">Learning</a></li>
+        </ul>
+      </div>
+
+      <!-- Language selector -->
+      <div class="lang-container">
+        <button id="lang-btn" class="icon-btn">EN ▾</button>
+        <ul id="lang-menu" class="dropdown hidden">
+          <li data-lang="en">English</li>
+          <li data-lang="es">Español</li>
+          <li data-lang="fr">Français</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Mobile button -->
+    <button id="mobile-btn" class="mobile-btn">☰</button>
+
+  </div>
+</header>
+
+</body>
+</html>
