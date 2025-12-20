@@ -1,0 +1,22 @@
+.about {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+}

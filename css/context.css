@@ -1,0 +1,45 @@
+.projects {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+
+.skills {
+  padding: var(--section-padding) 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.languages {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+
+.languages-grid {
+  max-width: 600px;
+  margin: auto;
+}
+
+.beyond {
+  padding: var(--section-padding) 0;
+}
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer {
+  padding: 4rem 0 2rem;
+  background: var(--bg-secondary);
+}
