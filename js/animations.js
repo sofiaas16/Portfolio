@@ -1,3 +1,4 @@
+
 const progressBars = document.querySelectorAll(".progress-fill")
 
 const progressObserver = new IntersectionObserver((entries, observer) => {
