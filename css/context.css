@@ -29,17 +29,36 @@
   max-width: 600px;
   margin: auto;
 }
-
 .beyond {
   padding: var(--section-padding) 0;
 }
 
+/* GRID */
 .beyond-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
-.footer {
-  padding: 4rem 0 2rem;
-  background: var(--bg-secondary);
+/* CARD */
+.beyond-card {
+  text-align: center;
+}
+
+/* CONTENEDOR DE IMAGEN */
+.beyond-emoji {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* IMAGEN */
+.beyond-emoji img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
