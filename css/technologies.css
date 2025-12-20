@@ -1,0 +1,27 @@
+.technologies {
+  padding: var(--section-padding) 0;
+}
+
+.tech-categories {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tech-tab {
+  border: 1px solid var(--border);
+  border-radius: 50px;
+}
+
+.tech-carousel {
+  overflow: hidden;
+}
+
+.tech-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  100% { transform: translateX(-50%); }
+}
