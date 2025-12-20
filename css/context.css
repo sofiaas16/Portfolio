@@ -33,6 +33,7 @@
   padding: var(--section-padding) 0;
 }
 
+
 /* GRID */
 .beyond-grid {
   display: grid;
@@ -61,4 +62,37 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.project-image {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.about {
+  padding: 6rem 0;
+}
+
+.about-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
 }

@@ -1,23 +1,17 @@
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
-const navLinks = document.querySelector(".nav-links")
-const navbar = document.querySelector(".navbar")
+document.addEventListener("DOMContentLoaded", () => {
+  const pagesSelector = document.querySelector(".pages-selector")
+  const pagesBtn = document.querySelector(".pages-btn")
 
-mobileMenuBtn.addEventListener("click", () => {
-  mobileMenuBtn.classList.toggle("open")
-  navLinks.classList.toggle("open")
-})
+  if (!pagesSelector || !pagesBtn) return
 
-navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenuBtn.classList.remove("open")
-    navLinks.classList.remove("open")
+  pagesBtn.addEventListener("click", (e) => {
+    e.stopPropagation()
+    pagesSelector.classList.toggle("open")
   })
-})
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    navbar.style.boxShadow = "0 4px 20px var(--shadow)"
-  } else {
-    navbar.style.boxShadow = "none"
-  }
+  document.addEventListener("click", (e) => {
+    if (!pagesSelector.contains(e.target)) {
+      pagesSelector.classList.remove("open")
+    }
+  })
 })
