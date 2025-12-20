@@ -71,6 +71,8 @@
 }
 .pages-selector {
   position: relative;
+
+  text-decoration: none;
 }
 .lang-btn {
   background: transparent;
@@ -87,6 +89,7 @@
 }
 
 .pages-btn {
+  text-decoration: none;
   background: transparent;
   border: 1px solid var(--border);
   padding: 0.5rem 1rem;
@@ -144,6 +147,10 @@
 
 .pages-dropdown {
   position: absolute;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: block;
+  width: 100%;
   top: calc(100% + 8px);
   right: 0;
   background: var(--bg-card);
@@ -179,6 +186,12 @@
   padding: 0.75rem 1rem;
   cursor: pointer;
   font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.pages-dropdown li a {
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
 .lang-dropdown li:hover {
@@ -237,3 +250,4 @@
   height: 2px;
   background: var(--text-primary);
 }
+
