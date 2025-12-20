@@ -1,65 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/variables.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sara Martínez | Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/technologies.css">
+    <link rel="stylesheet" href="./css/context.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="navbar">
-  <div class="nav-container">
-
-    <!-- LEFT: terminal + links -->
-    <div class="nav-left">
-      <span class="terminal">~/I</span>
-
-      <nav class="nav-links">
-        <a href="#hero">Home</a>
-        <a href="#about">About me</a>
-        <a href="#technologies">Technology & Tools</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Soft Skills</a>
-        <a href="#languages">Languages</a>
-      </nav>
-    </div>
-
-    <!-- RIGHT: actions -->
-    <div class="nav-right">
-
-      <!-- Theme toggle -->
-      <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-        🌙
+<body data-theme="light">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="terminal-text">~/</span><span class="typing-cursor">I</span>
+      </a>
+      
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
 
-      <!-- Dropdown menu -->
-      <div class="menu-container">
-        <button id="menu-btn" class="icon-btn">☰</button>
-        <ul id="menu-dropdown" class="dropdown hidden">
-          <li><a href="pages/contact.html">Contact me</a></li>
-          <li><a href="pages/projects.html">More projects</a></li>
-          <li><a href="pages/learning.html">Learning</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#beyond">Beyond Tech</a></li>
+      </ul>
 
-      <!-- Language selector -->
-      <div class="lang-container">
-        <button id="lang-btn" class="icon-btn">EN ▾</button>
-        <ul id="lang-menu" class="dropdown hidden">
-          <li data-lang="en">English</li>
-          <li data-lang="es">Español</li>
-          <li data-lang="fr">Français</li>
-        </ul>
+      <div class="nav-actions">
+        <div class="language-selector">
+          <button class="lang-btn">EN <span class="arrow">▼</span></button>
+          <ul class="lang-dropdown">
+            <li data-lang="en" class="active">English</li>
+            <li data-lang="es">Español</li>
+            <li data-lang="fr">Français</li>
+          </ul>
+        </div>
+        
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="sun-icon">☀️</span>
+          <span class="moon-icon">🌙</span>
+        </button>
       </div>
-
     </div>
+  </nav>
 
-    <!-- Mobile button -->
-    <button id="mobile-btn" class="mobile-btn">☰</button>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Sara Zambrano</h1>
+        <h2 class="hero-title">Software Developer</h2>
+        <p class="hero-description">Building elegant solutions with clean code and modern technologies.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="floating-icons">
+          <div class="tech-icon" data-delay="0">
+            <img src="/placeholder.svg?height=60&width=60" alt="React">
+          </div>
+          <div class="tech-icon" data-delay="1">
+            <img src="/placeholder.svg?height=60&width=60" alt="JavaScript">
+          </div>
+          <div class="tech-icon" data-delay="2">
+            <img src="/placeholder.svg?height=60&width=60" alt="TypeScript">
+          </div>
+          <div class="tech-icon" data-delay="3">
+            <img src="/placeholder.svg?height=60&width=60" alt="Node.js">
+          </div>
+          <div class="tech-icon" data-delay="4">
+            <img src="/placeholder.svg?height=60&width=60" alt="Python">
+          </div>
+          <div class="tech-icon" data-delay="5">
+            <img src="/placeholder.svg?height=60&width=60" alt="CSS3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</header>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a <strong>software developer</strong> with a passion for creating intuitive web experiences. With a background in both frontend and backend technologies, I enjoy tackling challenges that require both technical precision and creative problem-solving.</p>
+          <p>Currently focused on building scalable applications using modern frameworks and best practices. I believe in writing clean, maintainable code and continuously learning new technologies.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">3+</span>
+            <span class="highlight-label">Years Experience</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">20+</span>
+            <span class="highlight-label">Projects Completed</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">5+</span>
+            <span class="highlight-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="technologies" id="technologies">
+    <div class="container">
+      <h2 class="section-title">Technologies</h2>
+      <div class="tech-categories">
+        <button class="tech-tab active" data-category="all">All</button>
+        <button class="tech-tab" data-category="frontend">Frontend</button>
+        <button class="tech-tab" data-category="backend">Backend</button>
+        <button class="tech-tab" data-category="database">Database</button>
+        <button class="tech-tab" data-category="tools">Tools</button>
+      </div>
+      <div class="tech-carousel">
+        <div class="tech-track">
+          <div class="tech-item" data-category="frontend">
+            <img src="/placeholder.svg?height=50&width=50" alt="HTML5">
+            <span>HTML5</span>
+          </div>
+          <div class="tech-item" data-category="frontend">
+            <img src="/placeholder.svg?height=50&width=50" alt="CSS3">
+            <span>CSS3</span>
+          </div>
+          <div class="tech-item" data-category="frontend">
+            <img src="/placeholder.svg?height=50&width=50" alt="JavaScript">
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item" data-category="frontend">
+            <img src="/placeholder.svg?height=50&width=50" alt="TypeScript">
+            <span>TypeScript</span>
+          </div>
+          <div class="tech-item" data-category="frontend">
+            <img src="/placeholder.svg?height=50&width=50" alt="React">
+            <span>React</span>
+          </div>
+          <div class="tech-item" data-category="backend">
+            <img src="/placeholder.svg?height=50&width=50" alt="Node.js">
+            <span>Node.js</span>
+          </div>
+          <div class="tech-item" data-category="backend">
+            <img src="/placeholder.svg?height=50&width=50" alt="Python">
+            <span>Python</span>
+          </div>
+          <div class="tech-item" data-category="backend">
+            <img src="/placeholder.svg?height=50&width=50" alt="Express">
+            <span>Express</span>
+          </div>
+          <div class="tech-item" data-category="database">
+            <img src="/placeholder.svg?height=50&width=50" alt="PostgreSQL">
+            <span>PostgreSQL</span>
+          </div>
+          <div class="tech-item" data-category="database">
+            <img src="/placeholder.svg?height=50&width=50" alt="MongoDB">
+            <span>MongoDB</span>
+          </div>
+          <div class="tech-item" data-category="tools">
+            <img src="/placeholder.svg?height=50&width=50" alt="Git">
+            <span>Git</span>
+          </div>
+          <div class="tech-item" data-category="tools">
+            <img src="/placeholder.svg?height=50&width=50" alt="Docker">
+            <span>Docker</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title">Latest Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-description">A full-stack e-commerce solution with payment integration, user authentication, and inventory management.</p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="/placeholder.svg?height=300&width=400" alt="E-Commerce Platform">
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-info">
+            <span class="project-tag">Mobile App</span>
+            <h3 class="project-title">Task Manager</h3>
+            <p class="project-description">A productivity app with real-time sync, collaborative features, and smart reminders.</p>
+            <div class="project-tech">
+              <span>React Native</span>
+              <span>Firebase</span>
+              <span>TypeScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="/placeholder.svg?height=300&width=400" alt="Task Manager">
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-info">
+            <span class="project-tag">API</span>
+            <h3 class="project-title">Weather API Service</h3>
+            <p class="project-description">RESTful API providing weather data with caching, rate limiting, and comprehensive documentation.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Redis</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">View Project →</a>
+              <a href="#" class="project-link">GitHub</a>
+            </div>
+          </div>
+          <div class="project-image">
+            <img src="/placeholder.svg?height=300&width=400" alt="Weather API">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft Skills Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title">Soft Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">💡</div>
+          <h3>Problem Solving</h3>
+          <p>Breaking down complex challenges into manageable solutions</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤝</div>
+          <h3>Team Collaboration</h3>
+          <p>Working effectively in cross-functional teams</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📚</div>
+          <h3>Continuous Learning</h3>
+          <p>Always exploring new technologies and methodologies</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🎯</div>
+          <h3>Attention to Detail</h3>
+          <p>Ensuring quality and precision in every line of code</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">💬</div>
+          <h3>Communication</h3>
+          <p>Explaining technical concepts clearly to any audience</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>Adaptability</h3>
+          <p>Quickly adjusting to new tools and environments</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section class="languages" id="languages">
+    <div class="container">
+      <h2 class="section-title">Languages</h2>
+      <div class="languages-grid">
+        <div class="language-card">
+          <div class="language-header">
+            <span class="language-name">Spanish</span>
+            <span class="language-level">Native</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-progress="100"></div>
+          </div>
+        </div>
+        <div class="language-card">
+          <div class="language-header">
+            <span class="language-name">English</span>
+            <span class="language-level">Fluent</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-progress="90"></div>
+          </div>
+        </div>
+        <div class="language-card">
+          <div class="language-header">
+            <span class="language-name">French</span>
+            <span class="language-level">Intermediate</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" data-progress="60"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beyond Tech Section -->
+  <section class="beyond" id="beyond">
+    <div class="container">
+      <h2 class="section-title">Beyond Tech</h2>
+      <p class="section-subtitle">When I'm not coding, you'll find me...</p>
+      <div class="beyond-grid">
+        <div class="beyond-card">
+          <div class="beyond-emoji">📖</div>
+          <h3>Reading</h3>
+          <p>Sci-fi novels and tech blogs</p>
+        </div>
+        <div class="beyond-card">
+          <div class="beyond-emoji">🎮</div>
+          <h3>Gaming</h3>
+          <p>Strategy and indie games</p>
+        </div>
+        <div class="beyond-card">
+          <div class="beyond-emoji">🎵</div>
+          <h3>Music</h3>
+          <p>Discovering new artists</p>
+        </div>
+        <div class="beyond-card">
+          <div class="beyond-emoji">✈️</div>
+          <h3>Travel</h3>
+          <p>Exploring new cultures</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3 class="footer-logo">Sara Martínez</h3>
+          <p class="footer-tagline">Building the web, one line at a time.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+          <a href="mailto:hello@sara.dev" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sara Martínez. All rights reserved. Jet tame danilo</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/theme.js"></script>
+<script src="js/lang.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/projects.js"></script>
 
 </body>
 </html>

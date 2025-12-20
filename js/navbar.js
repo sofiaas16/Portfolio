@@ -1,23 +1,23 @@
-// Mobile menu
-const mobileBtn = document.getElementById("mobile-btn");
-const navLinks = document.querySelector(".nav-links");
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
+const navLinks = document.querySelector(".nav-links")
+const navbar = document.querySelector(".navbar")
 
-mobileBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+mobileMenuBtn.addEventListener("click", () => {
+  mobileMenuBtn.classList.toggle("open")
+  navLinks.classList.toggle("open")
+})
 
-// Dropdown menu
-const menuBtn = document.getElementById("menu-btn");
-const menuDropdown = document.getElementById("menu-dropdown");
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenuBtn.classList.remove("open")
+    navLinks.classList.remove("open")
+  })
+})
 
-menuBtn.addEventListener("click", () => {
-  menuDropdown.classList.toggle("hidden");
-});
-
-// Language menu
-const langBtn = document.getElementById("lang-btn");
-const langMenu = document.getElementById("lang-menu");
-
-langBtn.addEventListener("click", () => {
-  langMenu.classList.toggle("hidden");
-});
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    navbar.style.boxShadow = "0 4px 20px var(--shadow)"
+  } else {
+    navbar.style.boxShadow = "none"
+  }
+})
