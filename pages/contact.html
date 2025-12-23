@@ -3,74 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sara Zambrano | Software Developer</title>
-  <link rel="icon" type="image/gif" href="../src/img/computerCat.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/contact.css">
-    <link rel="stylesheet" href="../css/animations.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Contact - Sara Zambrano</title>
+  <link rel="stylesheet" href="../css/contact.css">
+
 </head>
-<body data-theme="light">
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="terminal-text">~/</span><span class="typing-cursor">I</span>
-      </a>
-      
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+          <div class="contact-left-title">
+            <h2>Get in Touch</h2>
+            <hr>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+          </div>
+          <input type="hidden" name="access_key" value="41158069-59a1-4850-bb84-a97babea0b6c">
+          <input type="text" name="name" placeholder="Your Name" class="contact-input" required>
 
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#languages">Languages</a></li>
-        <li><a href="#beyond">Beyond Tech</a></li>
-      </ul>
+          <input type="email" name="email" placeholder="Your Email" class="contact-input" required>
 
-      <div class="nav-actions">
-        <div class="language-selector">
-          <button class="lang-btn">EN <span class="arrow">▼</span></button>
-          <ul class="lang-dropdown">
-            <li data-lang="en" class="active">English</li>
-            <li data-lang="es">Español</li>
-            <li data-lang="fr">Français</li>
-          </ul>
-        </div>
-        
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <span class="sun-icon">☀️</span>
-          <span class="moon-icon">🌙</span>
-        </button>
-
-        <div class="pages-selector">
-          <button class="pages-btn">☰<span class="arrow">▼</span></button>
-          <ul class="pages-dropdown">
-            <li><a href="pages/contact.html">Contact</a></li>
-            <li><a href="pages/learning.html">Learning</a></li>
-            <li><a href="pages/projects.html">Projects</a></li>
-          </ul>
-        </div>
-        </div>
-      </div>
-
-
+          <textarea name="message" placeholder="Your Message" class="contact-input" required></textarea>
+          <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+        <div class="contact-right">
+          <img src="../src/img/pc.png">
     </div>
-  </nav>
-
-
-    <script src="../js/navbar.js"></script>
-    <script src="../js/animations.js"></script>
-    <script src="../js/contact.js"></script>
-    <script src="../js/lang.js"></script>
-    <script src="../js/themeToggle.js"></script>
-
-  </body>
-  </html>
+</body>
+</html>
