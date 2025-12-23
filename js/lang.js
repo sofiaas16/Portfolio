@@ -19,6 +19,7 @@ langOptions.forEach((option) => {
     option.classList.add("active");
 
     langSelector.classList.remove("open");
+    localStorage.setItem("language", lang)
     setLanguage(lang);
   });
 });
@@ -258,6 +259,17 @@ function setLanguage(lang) {
   document.querySelector(".footer-tagline").textContent = t.footerTagline;
 }
 
-/* Default language */
 
-setLanguage("en");
+
+const savedLanguage = localStorage.getItem("language") || "en";
+setLanguage(savedLanguage);
+
+/* Update button + active state */
+langBtn.innerHTML = `${savedLanguage.toUpperCase()} <span class="arrow">▼</span>`;
+
+langOptions.forEach((option) => {
+  option.classList.toggle(
+    "active",
+    option.getAttribute("data-lang") === savedLanguage
+  );
+});
